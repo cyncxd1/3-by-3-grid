@@ -2,23 +2,13 @@ body {
 	background-color: rgba(220, 220, 220);
 	transition: 0.2s;
 	overflow: hidden;
-}
-body::-webkit-scrollbar,
-.grid::-webkit-scrollbar,
-p::-webkit-scrollbar,
-button::-webkit-scrollbar,
-a::-webkit-scrollbar,
-input::-webkit-scrollbar {
+} 
+
+body::-webkit-scrollbar, .grid::-webkit-scrollbar, p::-webkit-scrollbar, button::-webkit-scrollbar, a::-webkit-scrollbar, input::-webkit-scrollbar {
 	display: none;
 }
 
-body,
-div,
-p,
-button,
-a,
-h1,
-input {
+body, div, p, button, a, h1, input {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 }
@@ -100,9 +90,7 @@ button:active {
 	height: 4px;
 }
 
-.discord,
-.youtube,
-p {
+.discord, .youtube, p {
 	left: 0;
 	position: absolute;
 	margin-top: 400px;
@@ -118,8 +106,7 @@ p {
 	top: -370px;
 }
 
-.discord:hover,
-.youtube:hover {
+.discord:hover, .youtube:hover {
 	color: rgba(0, 0, 0, 0.7);
 }
 

@@ -1,136 +1,156 @@
 body {
-  background-color: rgba(220, 220, 220);
-  transition: 0.2s;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+	background-color: rgba(220, 220, 220);
+	transition: 0.2s;
+	overflow: hidden;
 }
-body::-webkit-scrollbar, .grid::-webkit-scrollbar, p::-webkit-scrollbar, button::-webkit-scrollbar, a::-webkit-scrollbar, input::-webkit-scrollbar {
-  display: none;
+body::-webkit-scrollbar,
+.grid::-webkit-scrollbar,
+p::-webkit-scrollbar,
+button::-webkit-scrollbar,
+a::-webkit-scrollbar,
+input::-webkit-scrollbar {
+	display: none;
 }
 
-body, div, p, button, a, h1, input {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+body,
+div,
+p,
+button,
+a,
+h1,
+input {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 
 .container {
-  display: grid;
-  width: 100%;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.container::-webkit-scrollbar {
-  display: none;
+	display: grid;
+	width: 100%;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
 }
 
 .grid {
-  display: grid;
-  width: 300px;
-  height: 300px;
-  background: none;
-  border-radius: 30px;
-  border: 4px solid rgba(0, 0, 0, 0);
-  box-shadow: 10px 10px 25px rgba(180, 180, 180),
-    -10px -10px 25px -1px rgba(255, 255, 255);
-  grid-template-columns: repeat(3, 100px);
-  align-items: center;
-  justify-content: center;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+	display: grid;
+	width: 300px;
+	height: 300px;
+	background: none;
+	border-radius: 30px;
+	border: 4px solid rgba(0, 0, 0, 0);
+	box-shadow: 10px 10px 25px rgba(180, 180, 180), -10px -10px 25px -1px rgba(255, 255, 255);
+	grid-template-columns: repeat(3, 100px);
+	align-items: center;
+	justify-content: center;
 }
 
 button {
-  width: 70px;
-  height: 70px;
-  margin-left: 15px;
-  background: none;
-  border: 2px solid rgba(0, 0, 0, 0);
-  border-radius: 15px;
-  font-family: arial, monospace;
-  font-size: 20px;
-  color: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  box-shadow: none;
-  transition: 0.2s;
+	width: 70px;
+	height: 70px;
+	margin-left: 15px;
+	background: none;
+	border: 2px solid rgba(0, 0, 0, 0);
+	border-radius: 15px;
+	font-family: arial, monospace;
+	font-size: 20px;
+	color: rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	box-shadow: none;
+	transition: 0.2s;
 }
 
 button:hover {
-  box-shadow: 5px 5px 15px -1px rgba(180, 180, 180),
-    -5px -5px 15px -1px rgba(255, 255, 255);
+	box-shadow: 5px 5px 15px -1px rgba(180, 180, 180), -5px -5px 15px -1px rgba(255, 255, 255);
+	color: rgba(0, 0, 0, 0.4);
 }
 
 button:active {
-  box-shadow: 5px 5px 15px -1px rgba(180, 180, 180),
-    -5px -5px 15px -1px rgba(255, 255, 255),
-    inset 5px 5px 15px -1px rgba(180, 180, 180),
-    inset -5px -5px 15px -1px rgba(255, 255, 255, 0);
+	color: rgba(0, 0, 0, 0.7);
+	box-shadow: 5px 5px 15px -1px rgba(180, 180, 180), -5px -5px 15px -1px rgba(255, 255, 255), inset 5px 5px 15px -1px rgba(180, 180, 180), inset -5px -5px 15px -1px rgba(255, 255, 255, 0);
 }
 
 #theme {
-  -webkit-appearance: none;
-  appearance: none;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  margin-left: 250px;
-  outline: none;
-  width: 50px;
-  height: 50px;
-  outline: none;
-  border-radius: 50%;
-  box-shadow: 5px 5px 15px -1px rgba(180, 180, 180),
-    -5px -5px 15px -1px rgba(255, 255, 255);
-  border: 2px solid rgba(220, 220, 220, 0);
-  transition: 0.2s;
-  cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	margin-left: 250px;
+	outline: none;
+	width: 50px;
+	height: 50px;
+	outline: none;
+	border-radius: 50%;
+	box-shadow: 5px 5px 15px -1px rgba(180, 180, 180), -5px -5px 15px -1px rgba(255, 255, 255);
+	border: 2px solid rgba(220, 220, 220, 0);
+	transition: 0.2s;
+	cursor: pointer;
 }
 
 #theme:checked {
-  box-shadow: 5px 5px 35px -1px rgba(15, 15, 15),
-    -5px -5px 35px -1px rgba(80, 80, 80),
-    inset 5px 5px 15px -1px rgba(15, 15, 15),
-    inset -5px -5px 15px -1px rgba(80, 80, 80);
-  border-radius: 140px;
+	box-shadow: 5px 5px 35px -1px rgba(15, 15, 15), -5px -5px 35px -1px rgba(80, 80, 80), inset 5px 5px 15px -1px rgba(15, 15, 15), inset -5px -5px 15px -1px rgba(80, 80, 80);
+	border-radius: 140px;
 }
 
 #theme:after {
-  content: '';
-  color: rgba(255, 255, 255);
-  width: 4px;
-  height: 4px;
+	content: '';
+	color: rgba(255, 255, 255);
+	width: 4px;
+	height: 4px;
 }
 
-.discord, .youtube, p {
-  left: 0;
-  position: absolute;
-  margin-top: 400px;
-  margin-left: 1.5%;
-  text-decoration: none;
-  font-family: arial, monospace;
-  color: rgba(0, 0, 0, 0.3);
-  transition: 0.1s ease-in-out;
-  overflow: hidden;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  user-select: none;
+.discord,
+.youtube,
+p {
+	left: 0;
+	position: absolute;
+	margin-top: 400px;
+	margin-left: 1.5%;
+	text-decoration: none;
+	font-family: arial, monospace;
+	color: rgba(0, 0, 0, 0.3);
+	transition: 0.1s ease-in-out;
+	overflow: hidden;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	user-select: none;
+	top: -370px;
 }
 
-.discord:hover, .youtube:hover {
-  color: rgba(0, 0, 0, 0.7)
+.discord:hover,
+.youtube:hover {
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.discord {
+	position: absolute;
+	top: -310px;
 }
 
 .youtube {
-  margin-top: 350px;
+	position: absolute;
+	top: -340px;
 }
 
 p {
-  position: absolute;
-  font-family: arial, monospace;
-  cursor: default;
-  top: -370px;
+	position: absolute;
+	font-family: arial, monospace;
+	cursor: default;
+	top: -370px;
+}
+
+.bar {
+	position: absolute;
+	top: -20px;
+	width: 200px;
+}
+
+.youtube:hover {
+	position: absolute;
+	color: rgba(255, 0, 0, 0.2);
+}
+
+.discord:hover {
+	color: rgba(0, 0, 255, 0.2);
 }

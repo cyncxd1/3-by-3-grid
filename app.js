@@ -14,6 +14,8 @@ const darkBlue = 'rgba(0, 140, 255, 0.2)'
 for (let i = 1; i <= 9; i++) {
 	document.getElementById('button' + i).addEventListener('mouseup', function () {
 		console.log('button ' + i + ' is pressed')
+
+		document.getElementById('tracked').innerHTML = `${i} is pressed.`
 	})
 }
 
@@ -26,6 +28,7 @@ toggle.addEventListener('input', () => {
 		disc.style.color = light
 		youTube.style.color = light
 		credits.style.color = light
+		$('creation').style.color = 'rgba(255, 255, 255, 0.3)'
 
 		youTube.addEventListener('mouseover', function () {
 			youTube.style.color = darkRed
@@ -43,24 +46,28 @@ toggle.addEventListener('input', () => {
 		})
 
 		for (let i = 1; i <= 9; i++) {
-			document.querySelector('.button' + i).style.color = 'rgba(255, 255, 255, 0.7)'
+			document.querySelector('.button' + i).style.color = 'rgba(255, 255, 255, 0.3)'
 
 			document.getElementById('button' + i).addEventListener('mouseover', function () {
 				document.getElementById('button' + i).style.boxShadow = '5px 5px 15px -1px rgba(40, 40, 40), -5px -5px 15px -1px rgba(80, 80, 80)'
+				$('button' + i).style.color = 'rgba(255, 255, 255, 0.6)'
 			})
 
 			document.getElementById('button' + i).addEventListener('mouseout', function () {
 				document.getElementById('button' + i).style.boxShadow = 'none'
+				$('button' + i).style.color = 'rgba(255, 255, 255, 0.3)'
 			})
 
 			document.getElementById('button' + i).addEventListener('mousedown', function () {
 				document.getElementById('button' + i).style.transition = '0.09s'
 				document.getElementById('button' + i).style.boxShadow = '5px 5px 15px -1px rgba(40, 40, 40), -5px -5px 15px -1px rgba(80, 80, 80), inset 5px 5px 15px -1px rgba(40, 40, 40), inset -5px -5px 15px -1px rgba(80, 80, 80, 0)'
+				$('button' + i).style.color = 'rgba(255, 255, 255, 0.9)'
 			})
 
 			document.getElementById('button' + i).addEventListener('mouseup', function () {
 				document.getElementById('button' + i).style.transition = '0.2s'
 				document.getElementById('button' + i).style.boxShadow = '5px 5px 15px -1px rgba(40, 40, 40), -5px -5px 15px -1px rgba(80, 80, 80)'
+				$('button' + i).style.color = 'rgba(255, 255, 255, 0.6)'
 			})
 		}
 	} else {
@@ -73,6 +80,7 @@ toggle.addEventListener('input', () => {
 		disc.style.color = dark
 		youTube.style.color = dark
 		credits.style.color = dark
+		$('creation').style.color = 'rgba(0, 0, 0, 0.4)'
 
 		youTube.addEventListener('mouseover', function () {
 			youTube.style.color = lightRed
@@ -92,20 +100,26 @@ toggle.addEventListener('input', () => {
 			document.querySelector('.button' + i).style.color = 'rgba(0, 0, 0, 0.5)'
 			document.getElementById('button' + i).style.boxShadow = 'none'
 
+			$('button' + i).style.color = 'rgba(0, 0, 0, 0.3)'
+
 			document.getElementById('button' + i).addEventListener('mouseover', function () {
 				document.getElementById('button' + i).style.boxShadow = '5px 5px 15px -1px rgba(180, 180, 180), -5px -5px 15px -1px rgba(255, 255, 255)'
+				$('button' + i).style.color = 'rgba(0, 0, 0, 0.6)'
 			})
 
 			document.getElementById('button' + i).addEventListener('mouseout', function () {
 				document.getElementById('button' + i).style.boxShadow = 'none'
+				$('button' + i).style.color = 'rgba(0, 0, 0, 0.3)'
 			})
 
 			document.getElementById('button' + i).addEventListener('mousedown', function () {
 				document.getElementById('button' + i).style.boxShadow = '5px 5px 15px -1px rgba(180, 180, 180), -5px -5px 15px -1px rgba(255, 255, 255), inset 5px 5px 15px -1px rgba(180, 180, 180), inset -5px -5px 15px -1px rgba(255, 255, 255, 0)'
+				$('button' + i).style.color = 'rgba(0, 0, 0, 0.9)'
 			})
 
 			document.getElementById('button' + i).addEventListener('mouseup', function () {
 				document.getElementById('button' + i).style.boxShadow = '5px 5px 15px -1px rgba(180, 180, 180), -5px -5px 15px -1px rgba(255, 255, 255)'
+				$('button' + i).style.color = 'rgba(0, 0, 0, 0.6)'
 			})
 		}
 	}
@@ -118,4 +132,8 @@ function UncheckAll() {
 			w[i].checked = false
 		}
 	}
+}
+
+function $(x) {
+	return document.getElementById(x)
 }

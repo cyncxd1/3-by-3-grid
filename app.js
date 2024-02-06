@@ -123,3 +123,16 @@ toggle.addEventListener('input', () => {
 		}
 	}
 })
+
+function UncheckAll() {
+	var w = document.getElementsByTagName('input')
+	for (var i = 0; i < w.length; i++) {
+		if (w[i].type == 'checkbox') {
+			w[i].checked = false
+		}
+	}
+}
+
+function $(x) {
+	return document.getElementById(x)
+}

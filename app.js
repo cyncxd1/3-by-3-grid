@@ -12,7 +12,7 @@ const darkRed = 'rgba(255, 0, 0, 0.3)'
 const darkBlue = 'rgba(0, 140, 255, 0.2)'
 
 for (let i = 1; i <= 9; i++) {
-	$(`button${i}`).addEventListener('mouseup', function () {
+	$(`button${i}`).addEventListener('mouseup', () => {
 		console.log(`button ${i} is pressed`)
 		$('tracked').innerHTML = `${i} is pressed.`
 	})
@@ -29,41 +29,41 @@ toggle.addEventListener('input', () => {
 		credits.style.color = light
 		$('creation').style.color = 'rgba(255, 255, 255, 0.3)'
 
-		youTube.addEventListener('mouseover', function () {
+		youTube.addEventListener('mouseover', () => {
 			youTube.style.color = darkRed
 			console.log(darkRed)
 		})
-		youTube.addEventListener('mouseout', function () {
+		youTube.addEventListener('mouseout', () => {
 			youTube.style.color = light
 		})
 
-		disc.addEventListener('mouseover', function () {
+		disc.addEventListener('mouseover', () => {
 			disc.style.color = darkBlue
 		})
-		disc.addEventListener('mouseout', function () {
+		disc.addEventListener('mouseout', () => {
 			disc.style.color = light
 		})
 
 		for (let i = 1; i <= 9; i++) {
 			$(`button${i}`).style.color = 'rgba(255, 255, 255, 0.3)'
 
-			$(`button${i}`).addEventListener('mouseover', function () {
+			$(`button${i}`).addEventListener('mouseover', () => {
 				$(`button${i}`).style.boxShadow = '5px 5px 15px -1px rgba(40, 40, 40), -5px -5px 15px -1px rgba(80, 80, 80)'
 				$(`button${i}`).style.color = 'rgba(255, 255, 255, 0.6)'
 			})
 
-			$(`button${i}`).addEventListener('mouseout', function () {
+			$(`button${i}`).addEventListener('mouseout', () => {
 				$(`button${i}`).style.boxShadow = 'none'
 				$(`button${i}`).style.color = 'rgba(255, 255, 255, 0.3)'
 			})
 
-			$(`button${i}`).addEventListener('mousedown', function () {
+			$(`button${i}`).addEventListener('mousedown', () => {
 				$(`button${i}`).style.transition = '0.09s'
 				$(`button${i}`).style.boxShadow = '5px 5px 15px -1px rgba(40, 40, 40), -5px -5px 15px -1px rgba(80, 80, 80), inset 5px 5px 15px -1px rgba(40, 40, 40), inset -5px -5px 15px -1px rgba(80, 80, 80, 0)'
 				$(`button${i}`).style.color = 'rgba(255, 255, 255, 0.9)'
 			})
 
-			$(`button${i}`).addEventListener('mouseup', function () {
+			$(`button${i}`).addEventListener('mouseup', () => {
 				$(`button${i}`).style.transition = '0.2s'
 				$(`button${i}`).style.boxShadow = '5px 5px 15px -1px rgba(40, 40, 40), -5px -5px 15px -1px rgba(80, 80, 80)'
 				$(`button${i}`).style.color = 'rgba(255, 255, 255, 0.6)'
@@ -81,17 +81,17 @@ toggle.addEventListener('input', () => {
 		credits.style.color = dark
 		$('creation').style.color = 'rgba(0, 0, 0, 0.4)'
 
-		youTube.addEventListener('mouseover', function () {
+		youTube.addEventListener('mouseover', () => {
 			youTube.style.color = lightRed
 		})
-		youTube.addEventListener('mouseout', function () {
+		youTube.addEventListener('mouseout', () => {
 			youTube.style.color = dark
 		})
 
-		disc.addEventListener('mouseover', function () {
+		disc.addEventListener('mouseover', () => {
 			disc.style.color = lightBlue
 		})
-		disc.addEventListener('mouseout', function () {
+		disc.addEventListener('mouseout', () => {
 			disc.style.color = dark
 		})
 
@@ -101,22 +101,22 @@ toggle.addEventListener('input', () => {
 
 			$(`button${i}`).style.color = 'rgba(0, 0, 0, 0.3)'
 
-			$(`button${i}`).addEventListener('mouseover', function () {
+			$(`button${i}`).addEventListener('mouseover', () => {
 				$(`button${i}`).style.boxShadow = '5px 5px 15px -1px rgba(180, 180, 180), -5px -5px 15px -1px rgba(255, 255, 255)'
 				$(`button${i}`).style.color = 'rgba(0, 0, 0, 0.6)'
 			})
 
-			$(`button${i}`).addEventListener('mouseout', function () {
+			$(`button${i}`).addEventListener('mouseout', () => {
 				$(`button${i}`).style.boxShadow = 'none'
 				$(`button${i}`).style.color = 'rgba(0, 0, 0, 0.3)'
 			})
 
-			$(`button${i}`).addEventListener('mousedown', function () {
+			$(`button${i}`).addEventListener('mousedown', () => {
 				$(`button${i}`).style.boxShadow = '5px 5px 15px -1px rgba(180, 180, 180), -5px -5px 15px -1px rgba(255, 255, 255), inset 5px 5px 15px -1px rgba(180, 180, 180), inset -5px -5px 15px -1px rgba(255, 255, 255, 0)'
 				$(`button${i}`).style.color = 'rgba(0, 0, 0, 0.9)'
 			})
 
-			$(`button${i}`).addEventListener('mouseup', function () {
+			$(`button${i}`).addEventListener('mouseup', () => {
 				$(`button${i}`).style.boxShadow = '5px 5px 15px -1px rgba(180, 180, 180), -5px -5px 15px -1px rgba(255, 255, 255)'
 				$(`button${i}`).style.color = 'rgba(0, 0, 0, 0.6)'
 			})

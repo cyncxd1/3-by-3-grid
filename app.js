@@ -12,9 +12,8 @@ const darkRed = 'rgba(255, 0, 0, 0.3)'
 const darkBlue = 'rgba(0, 140, 255, 0.2)'
 
 for (let i = 1; i <= 9; i++) {
-	$('button' + i).addEventListener('mouseup', function () {
-		console.log('button ' + i + ' is pressed')
-
+	$(`button${i}`).addEventListener('mouseup', function () {
+		console.log(`button ${i} is pressed`)
 		$('tracked').innerHTML = `${i} is pressed.`
 	})
 }
@@ -46,28 +45,28 @@ toggle.addEventListener('input', () => {
 		})
 
 		for (let i = 1; i <= 9; i++) {
-			document.querySelector('.button' + i).style.color = 'rgba(255, 255, 255, 0.3)'
+			$(`button${i}`).style.color = 'rgba(255, 255, 255, 0.3)'
 
-			$('button' + i).addEventListener('mouseover', function () {
-				$('button' + i).style.boxShadow = '5px 5px 15px -1px rgba(40, 40, 40), -5px -5px 15px -1px rgba(80, 80, 80)'
-				$('button' + i).style.color = 'rgba(255, 255, 255, 0.6)'
+			$(`button${i}`).addEventListener('mouseover', function () {
+				$(`button${i}`).style.boxShadow = '5px 5px 15px -1px rgba(40, 40, 40), -5px -5px 15px -1px rgba(80, 80, 80)'
+				$(`button${i}`).style.color = 'rgba(255, 255, 255, 0.6)'
 			})
 
-			$('button' + i).addEventListener('mouseout', function () {
-				$('button' + i).style.boxShadow = 'none'
-				$('button' + i).style.color = 'rgba(255, 255, 255, 0.3)'
+			$(`button${i}`).addEventListener('mouseout', function () {
+				$(`button${i}`).style.boxShadow = 'none'
+				$(`button${i}`).style.color = 'rgba(255, 255, 255, 0.3)'
 			})
 
-			$('button' + i).addEventListener('mousedown', function () {
-				$('button' + i).style.transition = '0.09s'
-				$('button' + i).style.boxShadow = '5px 5px 15px -1px rgba(40, 40, 40), -5px -5px 15px -1px rgba(80, 80, 80), inset 5px 5px 15px -1px rgba(40, 40, 40), inset -5px -5px 15px -1px rgba(80, 80, 80, 0)'
-				$('button' + i).style.color = 'rgba(255, 255, 255, 0.9)'
+			$(`button${i}`).addEventListener('mousedown', function () {
+				$(`button${i}`).style.transition = '0.09s'
+				$(`button${i}`).style.boxShadow = '5px 5px 15px -1px rgba(40, 40, 40), -5px -5px 15px -1px rgba(80, 80, 80), inset 5px 5px 15px -1px rgba(40, 40, 40), inset -5px -5px 15px -1px rgba(80, 80, 80, 0)'
+				$(`button${i}`).style.color = 'rgba(255, 255, 255, 0.9)'
 			})
 
-			$('button' + i).addEventListener('mouseup', function () {
-				$('button' + i).style.transition = '0.2s'
-				$('button' + i).style.boxShadow = '5px 5px 15px -1px rgba(40, 40, 40), -5px -5px 15px -1px rgba(80, 80, 80)'
-				$('button' + i).style.color = 'rgba(255, 255, 255, 0.6)'
+			$(`button${i}`).addEventListener('mouseup', function () {
+				$(`button${i}`).style.transition = '0.2s'
+				$(`button${i}`).style.boxShadow = '5px 5px 15px -1px rgba(40, 40, 40), -5px -5px 15px -1px rgba(80, 80, 80)'
+				$(`button${i}`).style.color = 'rgba(255, 255, 255, 0.6)'
 			})
 		}
 	} else {
@@ -97,43 +96,30 @@ toggle.addEventListener('input', () => {
 		})
 
 		for (let i = 1; i <= 9; i++) {
-			document.querySelector('.button' + i).style.color = 'rgba(0, 0, 0, 0.5)'
-			$('button' + i).style.boxShadow = 'none'
+			document.querySelector(`.button${i}`).style.color = 'rgba(0, 0, 0, 0.5)'
+			$(`button${i}`).style.boxShadow = 'none'
 
-			$('button' + i).style.color = 'rgba(0, 0, 0, 0.3)'
+			$(`button${i}`).style.color = 'rgba(0, 0, 0, 0.3)'
 
-			$('button' + i).addEventListener('mouseover', function () {
-				$('button' + i).style.boxShadow = '5px 5px 15px -1px rgba(180, 180, 180), -5px -5px 15px -1px rgba(255, 255, 255)'
-				$('button' + i).style.color = 'rgba(0, 0, 0, 0.6)'
+			$(`button${i}`).addEventListener('mouseover', function () {
+				$(`button${i}`).style.boxShadow = '5px 5px 15px -1px rgba(180, 180, 180), -5px -5px 15px -1px rgba(255, 255, 255)'
+				$(`button${i}`).style.color = 'rgba(0, 0, 0, 0.6)'
 			})
 
-			$('button' + i).addEventListener('mouseout', function () {
-				$('button' + i).style.boxShadow = 'none'
-				$('button' + i).style.color = 'rgba(0, 0, 0, 0.3)'
+			$(`button${i}`).addEventListener('mouseout', function () {
+				$(`button${i}`).style.boxShadow = 'none'
+				$(`button${i}`).style.color = 'rgba(0, 0, 0, 0.3)'
 			})
 
-			$('button' + i).addEventListener('mousedown', function () {
-				$('button' + i).style.boxShadow = '5px 5px 15px -1px rgba(180, 180, 180), -5px -5px 15px -1px rgba(255, 255, 255), inset 5px 5px 15px -1px rgba(180, 180, 180), inset -5px -5px 15px -1px rgba(255, 255, 255, 0)'
-				$('button' + i).style.color = 'rgba(0, 0, 0, 0.9)'
+			$(`button${i}`).addEventListener('mousedown', function () {
+				$(`button${i}`).style.boxShadow = '5px 5px 15px -1px rgba(180, 180, 180), -5px -5px 15px -1px rgba(255, 255, 255), inset 5px 5px 15px -1px rgba(180, 180, 180), inset -5px -5px 15px -1px rgba(255, 255, 255, 0)'
+				$(`button${i}`).style.color = 'rgba(0, 0, 0, 0.9)'
 			})
 
-			$('button' + i).addEventListener('mouseup', function () {
-				$('button' + i).style.boxShadow = '5px 5px 15px -1px rgba(180, 180, 180), -5px -5px 15px -1px rgba(255, 255, 255)'
-				$('button' + i).style.color = 'rgba(0, 0, 0, 0.6)'
+			$(`button${i}`).addEventListener('mouseup', function () {
+				$(`button${i}`).style.boxShadow = '5px 5px 15px -1px rgba(180, 180, 180), -5px -5px 15px -1px rgba(255, 255, 255)'
+				$(`button${i}`).style.color = 'rgba(0, 0, 0, 0.6)'
 			})
 		}
 	}
 })
-
-function UncheckAll() {
-	var w = document.getElementsByTagName('input')
-	for (var i = 0; i < w.length; i++) {
-		if (w[i].type == 'checkbox') {
-			w[i].checked = false
-		}
-	}
-}
-
-function $(x) {
-	return document.getElementById(x)
-}

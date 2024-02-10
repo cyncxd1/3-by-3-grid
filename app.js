@@ -98,5 +98,3 @@ function $(id) {
 document.querySelectorAll('button').forEach((button, index) => {
 	button.addEventListener('mouseup', () => ($('tracked').textContent = `${index + 1} is clicked`))
 })
-
-document.querySelector('#theme').addEventListener('input', handleCheckboxChange)

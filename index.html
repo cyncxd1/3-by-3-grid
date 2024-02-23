@@ -8,6 +8,31 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body onload="uncheckAllCheckboxes()">
+		<!--noscript-->
+		<noscript>
+			<style>
+				.container {
+					display: none;
+				}
+				body {
+					width: 100%;
+					height: 100vh;
+					overflow: hidden;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: rgba(0, 0, 0);
+					background-image: url('Untitled.jpg');
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+				h1 {
+					color: rgba(255, 0, 0);
+					font-family: monospace;
+				}
+			</style>
+			<h1>Your javascript is not enabled. Please enable it.</h1>
+		</noscript>
 		<div class="container">
 			<div class="grid">
 				<button id="button1" class="button1">1</button>
